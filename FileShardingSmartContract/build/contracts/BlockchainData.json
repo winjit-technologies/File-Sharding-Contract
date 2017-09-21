@@ -1,0 +1,3799 @@
+{
+  "contractName": "BlockchainData",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "dateTime",
+          "type": "bytes32"
+        },
+        {
+          "name": "sequence",
+          "type": "uint256"
+        },
+        {
+          "name": "hashOfFile",
+          "type": "string"
+        },
+        {
+          "name": "hashOfFileChunk",
+          "type": "string"
+        },
+        {
+          "name": "uuid",
+          "type": "string"
+        },
+        {
+          "name": "miners",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "writeFileChunksToDatabase",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "hashOfFile",
+          "type": "string"
+        },
+        {
+          "name": "sequence",
+          "type": "uint256"
+        },
+        {
+          "name": "hashOfFile",
+          "type": "string"
+        },
+        {
+          "name": "hashOfFileChunk",
+          "type": "string"
+        },
+        {
+          "name": "uuid",
+          "type": "bytes32"
+        },
+        {
+          "name": "miners",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "getNumberOfFileChunks",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "hash",
+          "type": "string"
+        },
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true,
+      "name": "getFileChunksFromDatabase",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "uint256[]"
+        }
+      ]
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b610b748061001e6000396000f300606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063eed8def31461005c578063ef8513a914610195578063f3a9996f14610206575b600080fd5b341561006757600080fd5b61019360048080356000191690602001909190803590602001909190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091908035906020019082018035906020019080806020026020016040519081016040528093929190818152602001838360200280828437820191505050505050919050506103af565b005b34156101a057600080fd5b6101f0600480803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506104fb565b6040518082815260200191505060405180910390f35b341561021157600080fd5b61026a600480803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091908035906020019091905050610572565b604051808660001916600019168152602001858152602001806020018060200180602001848103845287818151815260200191508051906020019080838360005b838110156102c65780820151818401526020810190506102ab565b50505050905090810190601f1680156102f35780820380516001836020036101000a031916815260200191505b50848103835286818151815260200191508051906020019080838360005b8381101561032c578082015181840152602081019050610311565b50505050905090810190601f1680156103595780820380516001836020036101000a031916815260200191505b50848103825285818151815260200191508051906020019060200280838360005b8381101561039557808201518184015260208101905061037a565b505050509050019850505050505050505060405180910390f35b6103b76108b3565b600060a060405190810160405280896000191681526020018881526020018681526020018581526020018481525091506000866040518082805190602001908083835b60208310151561041f57805182526020820191506020810190506020830392506103fa565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020905080805480600101828161046791906108f8565b91600052602060002090600502016000849091909150600082015181600001906000191690556020820151816001015560408201518160020190805190602001906104b392919061092a565b5060608201518160030190805190602001906104d092919061092a565b5060808201518160040190805190602001906104ed9291906109aa565b505050505050505050505050565b600080826040518082805190602001908083835b602083101515610534578051825260208201915060208101905060208303925061050f565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020805490509050919050565b60008061057d6109f7565b6105856109f7565b61058d610a0b565b6000806105986109f7565b6105a06109f7565b6105a8610a0b565b6105b0610a1f565b6105b86108b3565b60056040518059106105c75750595b9080825280602002602001820160405250925060008e6040518082805190602001908083835b60208310151561061257805182526020820191506020810190506020830392506105ed565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020805480602002602001604051908101604052809291908181526020016000905b82821015610850578382906000526020600020906005020160a0604051908101604052908160008201546000191660001916815260200160018201548152602001600282018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561073e5780601f106107135761010080835404028352916020019161073e565b820191906000526020600020905b81548152906001019060200180831161072157829003601f168201915b50505050508152602001600382018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156107e05780601f106107b5576101008083540402835291602001916107e0565b820191906000526020600020905b8154815290600101906020018083116107c357829003601f168201915b505050505081526020016004820180548060200260200160405190810160405280929190818152602001828054801561083857602002820191906000526020600020905b815481526020019060010190808311610824575b50505050508152505081526020019060010190610665565b505050509150818d81518110151561086457fe5b906020019060200201519050806000015196508060200151955080604001519450806060015193508060800151925086868686869b509b509b509b509b50505050505050509295509295909350565b60a06040519081016040528060008019168152602001600081526020016108d8610a33565b81526020016108e5610a33565b81526020016108f2610a47565b81525090565b815481835581811511610925576005028160050283600052602060002091820191016109249190610a5b565b5b505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061096b57805160ff1916838001178555610999565b82800160010185558215610999579182015b8281111561099857825182559160200191906001019061097d565b5b5090506109a69190610aba565b5090565b8280548282559060005260206000209081019282156109e6579160200282015b828111156109e55782518255916020019190600101906109ca565b5b5090506109f39190610aba565b5090565b602060405190810160405280600081525090565b602060405190810160405280600081525090565b602060405190810160405280600081525090565b602060405190810160405280600081525090565b602060405190810160405280600081525090565b610ab791905b80821115610ab3576000808201600090556001820160009055600282016000610a8a9190610adf565b600382016000610a9a9190610adf565b600482016000610aaa9190610b27565b50600501610a61565b5090565b90565b610adc91905b80821115610ad8576000816000905550600101610ac0565b5090565b90565b50805460018160011615610100020316600290046000825580601f10610b055750610b24565b601f016020900490600052602060002090810190610b239190610aba565b5b50565b5080546000825590600052602060002090810190610b459190610aba565b505600a165627a7a72305820930170bcbdaa83e6480303fafbcc4fec20ce21c30d67e65b31aba5de0ebb04540029",
+  "deployedBytecode": "0x606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063eed8def31461005c578063ef8513a914610195578063f3a9996f14610206575b600080fd5b341561006757600080fd5b61019360048080356000191690602001909190803590602001909190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091908035906020019082018035906020019080806020026020016040519081016040528093929190818152602001838360200280828437820191505050505050919050506103af565b005b34156101a057600080fd5b6101f0600480803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506104fb565b6040518082815260200191505060405180910390f35b341561021157600080fd5b61026a600480803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091908035906020019091905050610572565b604051808660001916600019168152602001858152602001806020018060200180602001848103845287818151815260200191508051906020019080838360005b838110156102c65780820151818401526020810190506102ab565b50505050905090810190601f1680156102f35780820380516001836020036101000a031916815260200191505b50848103835286818151815260200191508051906020019080838360005b8381101561032c578082015181840152602081019050610311565b50505050905090810190601f1680156103595780820380516001836020036101000a031916815260200191505b50848103825285818151815260200191508051906020019060200280838360005b8381101561039557808201518184015260208101905061037a565b505050509050019850505050505050505060405180910390f35b6103b76108b3565b600060a060405190810160405280896000191681526020018881526020018681526020018581526020018481525091506000866040518082805190602001908083835b60208310151561041f57805182526020820191506020810190506020830392506103fa565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020905080805480600101828161046791906108f8565b91600052602060002090600502016000849091909150600082015181600001906000191690556020820151816001015560408201518160020190805190602001906104b392919061092a565b5060608201518160030190805190602001906104d092919061092a565b5060808201518160040190805190602001906104ed9291906109aa565b505050505050505050505050565b600080826040518082805190602001908083835b602083101515610534578051825260208201915060208101905060208303925061050f565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020805490509050919050565b60008061057d6109f7565b6105856109f7565b61058d610a0b565b6000806105986109f7565b6105a06109f7565b6105a8610a0b565b6105b0610a1f565b6105b86108b3565b60056040518059106105c75750595b9080825280602002602001820160405250925060008e6040518082805190602001908083835b60208310151561061257805182526020820191506020810190506020830392506105ed565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020805480602002602001604051908101604052809291908181526020016000905b82821015610850578382906000526020600020906005020160a0604051908101604052908160008201546000191660001916815260200160018201548152602001600282018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561073e5780601f106107135761010080835404028352916020019161073e565b820191906000526020600020905b81548152906001019060200180831161072157829003601f168201915b50505050508152602001600382018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156107e05780601f106107b5576101008083540402835291602001916107e0565b820191906000526020600020905b8154815290600101906020018083116107c357829003601f168201915b505050505081526020016004820180548060200260200160405190810160405280929190818152602001828054801561083857602002820191906000526020600020905b815481526020019060010190808311610824575b50505050508152505081526020019060010190610665565b505050509150818d81518110151561086457fe5b906020019060200201519050806000015196508060200151955080604001519450806060015193508060800151925086868686869b509b509b509b509b50505050505050509295509295909350565b60a06040519081016040528060008019168152602001600081526020016108d8610a33565b81526020016108e5610a33565b81526020016108f2610a47565b81525090565b815481835581811511610925576005028160050283600052602060002091820191016109249190610a5b565b5b505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061096b57805160ff1916838001178555610999565b82800160010185558215610999579182015b8281111561099857825182559160200191906001019061097d565b5b5090506109a69190610aba565b5090565b8280548282559060005260206000209081019282156109e6579160200282015b828111156109e55782518255916020019190600101906109ca565b5b5090506109f39190610aba565b5090565b602060405190810160405280600081525090565b602060405190810160405280600081525090565b602060405190810160405280600081525090565b602060405190810160405280600081525090565b602060405190810160405280600081525090565b610ab791905b80821115610ab3576000808201600090556001820160009055600282016000610a8a9190610adf565b600382016000610a9a9190610adf565b600482016000610aaa9190610b27565b50600501610a61565b5090565b90565b610adc91905b80821115610ad8576000816000905550600101610ac0565b5090565b90565b50805460018160011615610100020316600290046000825580601f10610b055750610b24565b601f016020900490600052602060002090810190610b239190610aba565b5b50565b5080546000825590600052602060002090810190610b459190610aba565b505600a165627a7a72305820930170bcbdaa83e6480303fafbcc4fec20ce21c30d67e65b31aba5de0ebb04540029",
+  "sourceMap": "113:3113:0:-;;;557:46;;;;;;;;113:3113;;;;;;",
+  "deployedSourceMap": "113:3113:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;673:446;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3084:139;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2255:749;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;673:446:0;892:34;;:::i;:::-;996:38;929:60;;;;;;;;;943:8;929:60;;;;;;;952:8;929:60;;;;961:15;929:60;;;;977:4;929:60;;;;982:6;929:60;;;892:97;;1037:15;1053:10;1037:27;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:2;51:6;36:153;;;182:3;176:5;171:3;164:6;98:2;93:3;89;82:19;;123:2;118:3;114;107:19;;148:2;143:3;139;132:19;;36:153;;;274:1;267:3;263:2;259:3;254;250;246;315:4;311:3;305;299:5;295:3;356:4;350:3;344:5;340:3;389:7;380;377:2;372:3;365:6;3:399;;;;;;;;;;;;;;;;;;;;;;;;996:68:0;;1071:14;:34;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;1091:13;1071:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;673:446;;;;;;;;:::o;3084:139::-;3155:4;3176:15;3192:10;3176:27;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:2;51:6;36:153;;;182:3;176:5;171:3;164:6;98:2;93:3;89;82:19;;123:2;118:3;114;107:19;;148:2;143:3;139;132:19;;36:153;;;274:1;267:3;263:2;259:3;254;250;246;315:4;311:3;305;299:5;295:3;356:4;350:3;344:5;340:3;389:7;380;377:2;372:3;365:6;3:399;;;;;;;;;;;;;;;;;;;;;;;;3176:34:0;;;;3169:41;;3084:139;;;:::o;2255:749::-;2342:7;2350:4;2356:6;;:::i;:::-;2364;;:::i;:::-;2371:9;;:::i;:::-;2396:17;2423:14;2449:30;;:::i;:::-;2489:18;;:::i;:::-;2516:23;;:::i;:::-;2569:35;;:::i;:::-;2637:36;;:::i;:::-;2556:1;2542:16;;;;;;;;;;;;;;;;;;;;;;;;2516:42;;2607:15;2623:4;2607:21;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:2;51:6;36:153;;;182:3;176:5;171:3;164:6;98:2;93:3;89;82:19;;123:2;118:3;114;107:19;;148:2;143:3;139;132:19;;36:153;;;274:1;267:3;263:2;259:3;254;250;246;315:4;311:3;305;299:5;295:3;356:4;350:3;344:5;340:3;389:7;380;377:2;372:3;365:6;3:399;;;;;;;;;;;;;;;;;;;;;;;;2569:59:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2676:11;2688:5;2676:18;;;;;;;;;;;;;;;;;;2637:57;;2719:15;:24;;;2708:35;;2763:15;:24;;;2752:35;;2817:15;:31;;;2799:49;;2869:15;:20;;;2862:27;;2907:15;:22;;;2898:31;;2952:8;2962;2971:15;2987:4;2992:6;2944:55;;;;;;;;;;2255:749;;;;;;;;;;;;;;;:::o;113:3113::-;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;:::i;:::-;;;;;;;;;:::i;:::-;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::o",
+  "source": "pragma solidity ^0.4.11;\r\n\r\n/**\r\n This contract is used to pass data to blockchain to store on miners data\r\n */\r\ncontract BlockchainData {\r\n\r\n  // entity made to store chunks of file in the database\r\n    struct FileDataChunk {       \r\n        bytes32 dateTime;\r\n        uint sequence;       \r\n        string hashOfFileChunk;\r\n        string uuid;        \r\n        uint256[] miners;\r\n    }\r\n\r\n  mapping (string => FileDataChunk[])  filedataMapping;\r\n \r\n  //Empty Constructor for blockchain contract , we can further make any initialisations if required  \r\n  function BlockchainData() public {\r\n     \r\n  }\r\n\r\n  \r\n  //This Function is used to write data into the database \r\n  function writeFileChunksToDatabase(bytes32 dateTime,uint sequence,string hashOfFile, string hashOfFileChunk,string uuid,uint256[] miners) public {         \r\n    //first get any previous chunks of file as array    \r\n    FileDataChunk memory filedatachunk = FileDataChunk(dateTime,sequence,hashOfFileChunk,uuid,miners);\r\n    FileDataChunk[] storage tempdatachunks = filedataMapping[hashOfFile];\r\n    tempdatachunks.push(filedatachunk);\r\n        \r\n}\r\n \r\n // This function returns the all chunk written for the particular UUID of the file\r\n /*function getFileChunksFromDatabase(string hash) constant public returns \r\n (bytes32[],uint[], string[5] ,bytes32[],uint256[5][] ) \r\n {  \r\n\r\n    bytes32[] memory datetime = new bytes32[](5);\r\n    uint[] memory sequence = new uint[](5);   \r\n    string[] memory hashOfFileChunk = new string[](5);\r\n    bytes32[] memory uuid = new bytes32[](5);\r\n    uint256[5][] memory miners = new uint256[5][](5);\r\n\r\n    FileDataChunk[]  memory filedataobj = filedataMapping[hash];\r\n\r\n     for (uint i = 0; i < filedataobj.length; ++i) {      \r\n        datetime[i] = filedataobj[i].dateTime;\r\n        sequence[i] = filedataobj[i].sequence;         \r\n        hashOfFileChunk[i] = filedataobj[i].hashOfFileChunk;         \r\n        uuid[i] = filedataobj[i].uuid;  \r\n\r\n        for (uint j = 0;j < 5; j++) {                \r\n            miners[i][j] = filedataobj[i].miners[j];\r\n        }       \r\n  }\r\n    return (datetime, sequence,hashOfFileChunk,uuid,miners);\r\n }*/\r\n\r\n  // This function returns the particular chunk written for the particular hash of the file\r\n function getFileChunksFromDatabase(string hash,uint index) constant public returns \r\n (bytes32,uint, string ,string,uint256[]) \r\n {  \r\n      bytes32  datetime; \r\n      uint  sequence;   \r\n      string  memory hashOfFileChunk; \r\n      string memory uuid;\r\n      uint256[] memory miners = new uint256[](5);\r\n\r\n      FileDataChunk[]  memory filedataobj = filedataMapping[hash];\r\n      FileDataChunk memory filedatatempobj = filedataobj[index];     \r\n      datetime = filedatatempobj.dateTime;\r\n      sequence = filedatatempobj.sequence;   \r\n      hashOfFileChunk = filedatatempobj.hashOfFileChunk;     \r\n      uuid = filedatatempobj.uuid;\r\n      miners = filedatatempobj.miners;    \r\n\r\n      return (datetime, sequence,hashOfFileChunk,uuid,miners);\r\n }\r\n\r\n   //This function is used to get number of chunks written for the file\r\n   function getNumberOfFileChunks(string hashOfFile) view public returns (uint) {\r\n     return filedataMapping[hashOfFile].length;      \r\n   }\r\n}\r\n\r\n//BlockchainData.deployed().then(function(instance) { return instance.writeFileChunksToDatabase(\"2013-09-29T18:46:19Z\",1,\"be07077ff8437f7eba78d3d53663261d\",\"fg\",\"1890\",['12','123','1234']); });\r\n//BlockchainData.deployed().then(function(instance){return instance.getNumberOfFileChunks('29ee345');}).then(function(output){console.log(output.toLocaleString())});\r\n//BlockchainData.deployed().then(function(instance){return instance.getFileChunksFromDatabase('be07077ff8437f7eba78d3d53663261');}).then(function(output){console.log(output.toLocaleString())});\r\n//BlockchainData.deployed().then(function(instance) { return instance.writeFileChunksToDatabase(\"2013-09-29T18:46:19Z\",1,\"e815d0dbe0957d82a91f12458c7714047b9090515513be8d6f64640faf223c70\",\"e815d0dbe0957d82a91f12458c7714047b9090515513be8d6f64640faf223c70\",\"Ihr5yATvS9maB4iEx01qJNiMlJo5gbug06LzlTfa\",['12','123','1234','23','34']); });\r\n//BlockchainData.deployed().then(function(instance){return instance.getFileChunksFromDatabase('e815d0dbe0957d82a91f12458c7714047b9090515513be8d6f64640faf223c70',0);}).then(function(output){console.log(output.toLocaleString())});\r\n",
+  "sourcePath": "E:\\Workspaces\\Blockchain\\Iagon\\IagonSmartContract\\contracts\\BlockchainData.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/E/Workspaces/Blockchain/Iagon/IagonSmartContract/contracts/BlockchainData.sol",
+      "exportedSymbols": {
+        "BlockchainData": [
+          164
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".11"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": "This contract is used to pass data to blockchain to store on miners data\r",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            164
+          ],
+          "name": "BlockchainData",
+          "scope": 165
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "BlockchainData.FileDataChunk",
+              "name": "FileDataChunk",
+              "scope": 164,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "dateTime",
+                  "scope": 13,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 2,
+                    "name": "ElementaryTypeName",
+                    "src": "243:7:0"
+                  }
+                ],
+                "id": 3,
+                "name": "VariableDeclaration",
+                "src": "243:16:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "sequence",
+                  "scope": 13,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 4,
+                    "name": "ElementaryTypeName",
+                    "src": "270:4:0"
+                  }
+                ],
+                "id": 5,
+                "name": "VariableDeclaration",
+                "src": "270:13:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "hashOfFileChunk",
+                  "scope": 13,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 6,
+                    "name": "ElementaryTypeName",
+                    "src": "301:6:0"
+                  }
+                ],
+                "id": 7,
+                "name": "VariableDeclaration",
+                "src": "301:22:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "uuid",
+                  "scope": 13,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 8,
+                    "name": "ElementaryTypeName",
+                    "src": "334:6:0"
+                  }
+                ],
+                "id": 9,
+                "name": "VariableDeclaration",
+                "src": "334:11:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "miners",
+                  "scope": 13,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256[] storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "length": null,
+                      "type": "uint256[] storage pointer"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 10,
+                        "name": "ElementaryTypeName",
+                        "src": "364:7:0"
+                      }
+                    ],
+                    "id": 11,
+                    "name": "ArrayTypeName",
+                    "src": "364:9:0"
+                  }
+                ],
+                "id": 12,
+                "name": "VariableDeclaration",
+                "src": "364:16:0"
+              }
+            ],
+            "id": 13,
+            "name": "StructDefinition",
+            "src": "204:184:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "filedataMapping",
+              "scope": 164,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(string memory => struct BlockchainData.FileDataChunk storage ref[] storage ref)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(string memory => struct BlockchainData.FileDataChunk storage ref[] storage ref)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 14,
+                    "name": "ElementaryTypeName",
+                    "src": "403:6:0"
+                  },
+                  {
+                    "attributes": {
+                      "length": null,
+                      "type": "struct BlockchainData.FileDataChunk storage ref[] storage pointer"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "FileDataChunk",
+                          "referencedDeclaration": 13,
+                          "type": "struct BlockchainData.FileDataChunk storage pointer"
+                        },
+                        "id": 15,
+                        "name": "UserDefinedTypeName",
+                        "src": "413:13:0"
+                      }
+                    ],
+                    "id": 16,
+                    "name": "ArrayTypeName",
+                    "src": "413:15:0"
+                  }
+                ],
+                "id": 17,
+                "name": "Mapping",
+                "src": "394:35:0"
+              }
+            ],
+            "id": 18,
+            "name": "VariableDeclaration",
+            "src": "394:52:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": true,
+              "modifiers": [
+                null
+              ],
+              "name": "BlockchainData",
+              "payable": false,
+              "scope": 164,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 19,
+                "name": "ParameterList",
+                "src": "580:2:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 20,
+                "name": "ParameterList",
+                "src": "590:0:0"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 21,
+                "name": "Block",
+                "src": "590:13:0"
+              }
+            ],
+            "id": 22,
+            "name": "FunctionDefinition",
+            "src": "557:46:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "writeFileChunksToDatabase",
+              "payable": false,
+              "scope": 164,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "dateTime",
+                      "scope": 63,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 23,
+                        "name": "ElementaryTypeName",
+                        "src": "708:7:0"
+                      }
+                    ],
+                    "id": 24,
+                    "name": "VariableDeclaration",
+                    "src": "708:16:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "sequence",
+                      "scope": 63,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 25,
+                        "name": "ElementaryTypeName",
+                        "src": "725:4:0"
+                      }
+                    ],
+                    "id": 26,
+                    "name": "VariableDeclaration",
+                    "src": "725:13:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "hashOfFile",
+                      "scope": 63,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 27,
+                        "name": "ElementaryTypeName",
+                        "src": "739:6:0"
+                      }
+                    ],
+                    "id": 28,
+                    "name": "VariableDeclaration",
+                    "src": "739:17:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "hashOfFileChunk",
+                      "scope": 63,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 29,
+                        "name": "ElementaryTypeName",
+                        "src": "758:6:0"
+                      }
+                    ],
+                    "id": 30,
+                    "name": "VariableDeclaration",
+                    "src": "758:22:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "uuid",
+                      "scope": 63,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 31,
+                        "name": "ElementaryTypeName",
+                        "src": "781:6:0"
+                      }
+                    ],
+                    "id": 32,
+                    "name": "VariableDeclaration",
+                    "src": "781:11:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "miners",
+                      "scope": 63,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256[] memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "uint256[] storage pointer"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint256",
+                              "type": "uint256"
+                            },
+                            "id": 33,
+                            "name": "ElementaryTypeName",
+                            "src": "793:7:0"
+                          }
+                        ],
+                        "id": 34,
+                        "name": "ArrayTypeName",
+                        "src": "793:9:0"
+                      }
+                    ],
+                    "id": 35,
+                    "name": "VariableDeclaration",
+                    "src": "793:16:0"
+                  }
+                ],
+                "id": 36,
+                "name": "ParameterList",
+                "src": "707:103:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 37,
+                "name": "ParameterList",
+                "src": "818:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        39
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "filedatachunk",
+                          "scope": 63,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct BlockchainData.FileDataChunk memory",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "FileDataChunk",
+                              "referencedDeclaration": 13,
+                              "type": "struct BlockchainData.FileDataChunk storage pointer"
+                            },
+                            "id": 38,
+                            "name": "UserDefinedTypeName",
+                            "src": "892:13:0"
+                          }
+                        ],
+                        "id": 39,
+                        "name": "VariableDeclaration",
+                        "src": "892:34:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": true,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "struct BlockchainData.FileDataChunk memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bytes32",
+                                  "typeString": "bytes32"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                },
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                },
+                                {
+                                  "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                                  "typeString": "uint256[] memory"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 13,
+                              "type": "type(struct BlockchainData.FileDataChunk storage pointer)",
+                              "value": "FileDataChunk"
+                            },
+                            "id": 40,
+                            "name": "Identifier",
+                            "src": "929:13:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 24,
+                              "type": "bytes32",
+                              "value": "dateTime"
+                            },
+                            "id": 41,
+                            "name": "Identifier",
+                            "src": "943:8:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 26,
+                              "type": "uint256",
+                              "value": "sequence"
+                            },
+                            "id": 42,
+                            "name": "Identifier",
+                            "src": "952:8:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 30,
+                              "type": "string memory",
+                              "value": "hashOfFileChunk"
+                            },
+                            "id": 43,
+                            "name": "Identifier",
+                            "src": "961:15:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 32,
+                              "type": "string memory",
+                              "value": "uuid"
+                            },
+                            "id": 44,
+                            "name": "Identifier",
+                            "src": "977:4:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 35,
+                              "type": "uint256[] memory",
+                              "value": "miners"
+                            },
+                            "id": 45,
+                            "name": "Identifier",
+                            "src": "982:6:0"
+                          }
+                        ],
+                        "id": 46,
+                        "name": "FunctionCall",
+                        "src": "929:60:0"
+                      }
+                    ],
+                    "id": 47,
+                    "name": "VariableDeclarationStatement",
+                    "src": "892:97:0"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        51
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "tempdatachunks",
+                          "scope": 63,
+                          "stateVariable": false,
+                          "storageLocation": "storage",
+                          "type": "struct BlockchainData.FileDataChunk storage ref[] storage pointer",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "length": null,
+                              "type": "struct BlockchainData.FileDataChunk storage ref[] storage pointer"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "contractScope": null,
+                                  "name": "FileDataChunk",
+                                  "referencedDeclaration": 13,
+                                  "type": "struct BlockchainData.FileDataChunk storage pointer"
+                                },
+                                "id": 49,
+                                "name": "UserDefinedTypeName",
+                                "src": "996:13:0"
+                              }
+                            ],
+                            "id": 50,
+                            "name": "ArrayTypeName",
+                            "src": "996:15:0"
+                          }
+                        ],
+                        "id": 51,
+                        "name": "VariableDeclaration",
+                        "src": "996:38:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct BlockchainData.FileDataChunk storage ref[] storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 18,
+                              "type": "mapping(string memory => struct BlockchainData.FileDataChunk storage ref[] storage ref)",
+                              "value": "filedataMapping"
+                            },
+                            "id": 52,
+                            "name": "Identifier",
+                            "src": "1037:15:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 28,
+                              "type": "string memory",
+                              "value": "hashOfFile"
+                            },
+                            "id": 53,
+                            "name": "Identifier",
+                            "src": "1053:10:0"
+                          }
+                        ],
+                        "id": 54,
+                        "name": "IndexAccess",
+                        "src": "1037:27:0"
+                      }
+                    ],
+                    "id": 55,
+                    "name": "VariableDeclarationStatement",
+                    "src": "996:68:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_struct$_FileDataChunk_$13_memory_ptr",
+                                  "typeString": "struct BlockchainData.FileDataChunk memory"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (struct BlockchainData.FileDataChunk storage ref) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 51,
+                                  "type": "struct BlockchainData.FileDataChunk storage ref[] storage pointer",
+                                  "value": "tempdatachunks"
+                                },
+                                "id": 56,
+                                "name": "Identifier",
+                                "src": "1071:14:0"
+                              }
+                            ],
+                            "id": 58,
+                            "name": "MemberAccess",
+                            "src": "1071:19:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 39,
+                              "type": "struct BlockchainData.FileDataChunk memory",
+                              "value": "filedatachunk"
+                            },
+                            "id": 59,
+                            "name": "Identifier",
+                            "src": "1091:13:0"
+                          }
+                        ],
+                        "id": 60,
+                        "name": "FunctionCall",
+                        "src": "1071:34:0"
+                      }
+                    ],
+                    "id": 61,
+                    "name": "ExpressionStatement",
+                    "src": "1071:34:0"
+                  }
+                ],
+                "id": 62,
+                "name": "Block",
+                "src": "818:301:0"
+              }
+            ],
+            "id": 63,
+            "name": "FunctionDefinition",
+            "src": "673:446:0"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getFileChunksFromDatabase",
+              "payable": false,
+              "scope": 164,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "hash",
+                      "scope": 150,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 64,
+                        "name": "ElementaryTypeName",
+                        "src": "2290:6:0"
+                      }
+                    ],
+                    "id": 65,
+                    "name": "VariableDeclaration",
+                    "src": "2290:11:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "index",
+                      "scope": 150,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 66,
+                        "name": "ElementaryTypeName",
+                        "src": "2302:4:0"
+                      }
+                    ],
+                    "id": 67,
+                    "name": "VariableDeclaration",
+                    "src": "2302:10:0"
+                  }
+                ],
+                "id": 68,
+                "name": "ParameterList",
+                "src": "2289:24:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 150,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "bytes32",
+                          "name": "bytes32"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "bytes32",
+                              "type": "bytes32"
+                            },
+                            "id": 67,
+                            "name": "ElementaryTypeName",
+                            "src": "1292:7:0"
+                          }
+                        ],
+                        "id": 69,
+                        "name": "ElementaryTypeName",
+                        "src": "2342:7:0"
+                      }
+                    ],
+                    "id": 70,
+                    "name": "VariableDeclaration",
+                    "src": "2342:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 150,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "uint256",
+                          "name": "uint"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint",
+                              "type": "uint256"
+                            },
+                            "id": 70,
+                            "name": "ElementaryTypeName",
+                            "src": "1302:4:0"
+                          }
+                        ],
+                        "id": 71,
+                        "name": "ElementaryTypeName",
+                        "src": "2350:4:0"
+                      }
+                    ],
+                    "id": 72,
+                    "name": "VariableDeclaration",
+                    "src": "2350:4:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 150,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "string storage pointer",
+                          "name": "string"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "string",
+                              "type": "string storage pointer"
+                            },
+                            "id": 73,
+                            "name": "ElementaryTypeName",
+                            "src": "1310:6:0"
+                          }
+                        ],
+                        "id": 73,
+                        "name": "ElementaryTypeName",
+                        "src": "2356:6:0"
+                      }
+                    ],
+                    "id": 74,
+                    "name": "VariableDeclaration",
+                    "src": "2356:6:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 150,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "string storage pointer",
+                          "name": "string"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "bytes32",
+                              "type": "bytes32"
+                            },
+                            "id": 76,
+                            "name": "ElementaryTypeName",
+                            "src": "1320:7:0"
+                          }
+                        ],
+                        "id": 75,
+                        "name": "ElementaryTypeName",
+                        "src": "2364:6:0"
+                      }
+                    ],
+                    "id": 76,
+                    "name": "VariableDeclaration",
+                    "src": "2364:6:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 150,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256[] memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "uint256[] storage pointer"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "type": "uint256",
+                              "name": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "name": "uint256",
+                                  "type": "uint256"
+                                },
+                                "id": 79,
+                                "name": "ElementaryTypeName",
+                                "src": "1330:7:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "35",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 5",
+                                  "value": "5"
+                                },
+                                "id": 80,
+                                "name": "Literal",
+                                "src": "1338:1:0"
+                              }
+                            ],
+                            "id": 77,
+                            "name": "ElementaryTypeName",
+                            "src": "2371:7:0"
+                          }
+                        ],
+                        "id": 78,
+                        "name": "ArrayTypeName",
+                        "src": "2371:9:0"
+                      }
+                    ],
+                    "id": 79,
+                    "name": "VariableDeclaration",
+                    "src": "2371:9:0"
+                  }
+                ],
+                "id": 80,
+                "name": "ParameterList",
+                "src": "2341:40:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        null
+                      ],
+                      "initialValue": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "datetime",
+                          "scope": 150,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "bytes32",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "length": null,
+                              "type": "bytes32",
+                              "name": "bytes32"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "name": "bytes32",
+                                  "type": "bytes32"
+                                },
+                                "id": 86,
+                                "name": "ElementaryTypeName",
+                                "src": "1359:7:0"
+                              }
+                            ],
+                            "id": 81,
+                            "name": "ElementaryTypeName",
+                            "src": "2396:7:0"
+                          }
+                        ],
+                        "id": 82,
+                        "name": "VariableDeclaration",
+                        "src": "2396:17:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "bytes32[] memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_rational_5_by_1",
+                                  "typeString": "int_const 5"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "type": "function (uint256) pure returns (bytes32[] memory)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "length": null,
+                                  "type": "bytes32[] storage pointer"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "name": "bytes32",
+                                      "type": "bytes32"
+                                    },
+                                    "id": 89,
+                                    "name": "ElementaryTypeName",
+                                    "src": "1391:7:0"
+                                  }
+                                ],
+                                "id": 90,
+                                "name": "ArrayTypeName",
+                                "src": "1391:9:0"
+                              }
+                            ],
+                            "id": 91,
+                            "name": "NewExpression",
+                            "src": "1387:13:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "35",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 5",
+                              "value": "5"
+                            },
+                            "id": 92,
+                            "name": "Literal",
+                            "src": "1401:1:0"
+                          }
+                        ],
+                        "id": 93,
+                        "name": "FunctionCall",
+                        "src": "1387:16:0"
+                      }
+                    ],
+                    "id": 83,
+                    "name": "VariableDeclarationStatement",
+                    "src": "2396:17:0"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        null
+                      ],
+                      "initialValue": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "sequence",
+                          "scope": 150,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "uint256",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "length": null,
+                              "type": "uint256",
+                              "name": "uint"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "name": "uint",
+                                  "type": "uint256"
+                                },
+                                "id": 96,
+                                "name": "ElementaryTypeName",
+                                "src": "1410:4:0"
+                              }
+                            ],
+                            "id": 84,
+                            "name": "ElementaryTypeName",
+                            "src": "2423:4:0"
+                          }
+                        ],
+                        "id": 85,
+                        "name": "VariableDeclaration",
+                        "src": "2423:14:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256[] memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_rational_5_by_1",
+                                  "typeString": "int_const 5"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "type": "function (uint256) pure returns (uint256[] memory)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "length": null,
+                                  "type": "uint256[] storage pointer"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "name": "uint",
+                                      "type": "uint256"
+                                    },
+                                    "id": 99,
+                                    "name": "ElementaryTypeName",
+                                    "src": "1439:4:0"
+                                  }
+                                ],
+                                "id": 100,
+                                "name": "ArrayTypeName",
+                                "src": "1439:6:0"
+                              }
+                            ],
+                            "id": 101,
+                            "name": "NewExpression",
+                            "src": "1435:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "35",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 5",
+                              "value": "5"
+                            },
+                            "id": 102,
+                            "name": "Literal",
+                            "src": "1446:1:0"
+                          }
+                        ],
+                        "id": 103,
+                        "name": "FunctionCall",
+                        "src": "1435:13:0"
+                      }
+                    ],
+                    "id": 86,
+                    "name": "VariableDeclarationStatement",
+                    "src": "2423:14:0"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        null
+                      ],
+                      "initialValue": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "hashOfFileChunk",
+                          "scope": 150,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "string memory",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "length": null,
+                              "type": "string storage pointer",
+                              "name": "string"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "name": "string",
+                                  "type": "string storage pointer"
+                                },
+                                "id": 106,
+                                "name": "ElementaryTypeName",
+                                "src": "1458:6:0"
+                              }
+                            ],
+                            "id": 87,
+                            "name": "ElementaryTypeName",
+                            "src": "2449:6:0"
+                          }
+                        ],
+                        "id": 88,
+                        "name": "VariableDeclaration",
+                        "src": "2449:30:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "string memory[] memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_rational_5_by_1",
+                                  "typeString": "int_const 5"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "type": "function (uint256) pure returns (string memory[] memory)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "length": null,
+                                  "type": "string storage ref[] storage pointer"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "name": "string",
+                                      "type": "string storage pointer"
+                                    },
+                                    "id": 109,
+                                    "name": "ElementaryTypeName",
+                                    "src": "1496:6:0"
+                                  }
+                                ],
+                                "id": 110,
+                                "name": "ArrayTypeName",
+                                "src": "1496:8:0"
+                              }
+                            ],
+                            "id": 111,
+                            "name": "NewExpression",
+                            "src": "1492:12:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "35",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 5",
+                              "value": "5"
+                            },
+                            "id": 112,
+                            "name": "Literal",
+                            "src": "1505:1:0"
+                          }
+                        ],
+                        "id": 113,
+                        "name": "FunctionCall",
+                        "src": "1492:15:0"
+                      }
+                    ],
+                    "id": 89,
+                    "name": "VariableDeclarationStatement",
+                    "src": "2449:30:0"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        null
+                      ],
+                      "initialValue": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "uuid",
+                          "scope": 150,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "string memory",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "length": null,
+                              "type": "string storage pointer",
+                              "name": "string"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "name": "bytes32",
+                                  "type": "bytes32"
+                                },
+                                "id": 116,
+                                "name": "ElementaryTypeName",
+                                "src": "1514:7:0"
+                              }
+                            ],
+                            "id": 90,
+                            "name": "ElementaryTypeName",
+                            "src": "2489:6:0"
+                          }
+                        ],
+                        "id": 91,
+                        "name": "VariableDeclaration",
+                        "src": "2489:18:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "bytes32[] memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_rational_5_by_1",
+                                  "typeString": "int_const 5"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "type": "function (uint256) pure returns (bytes32[] memory)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "length": null,
+                                  "type": "bytes32[] storage pointer"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "name": "bytes32",
+                                      "type": "bytes32"
+                                    },
+                                    "id": 119,
+                                    "name": "ElementaryTypeName",
+                                    "src": "1542:7:0"
+                                  }
+                                ],
+                                "id": 120,
+                                "name": "ArrayTypeName",
+                                "src": "1542:9:0"
+                              }
+                            ],
+                            "id": 121,
+                            "name": "NewExpression",
+                            "src": "1538:13:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "35",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 5",
+                              "value": "5"
+                            },
+                            "id": 122,
+                            "name": "Literal",
+                            "src": "1552:1:0"
+                          }
+                        ],
+                        "id": 123,
+                        "name": "FunctionCall",
+                        "src": "1538:16:0"
+                      }
+                    ],
+                    "id": 92,
+                    "name": "VariableDeclarationStatement",
+                    "src": "2489:18:0"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        96
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "miners",
+                          "scope": 150,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "uint256[] memory",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "length": null,
+                              "type": "uint256[] storage pointer"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "type": "uint256",
+                                  "name": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "name": "uint256",
+                                      "type": "uint256"
+                                    },
+                                    "id": 127,
+                                    "name": "ElementaryTypeName",
+                                    "src": "1561:7:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "35",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "number",
+                                      "type": "int_const 5",
+                                      "value": "5"
+                                    },
+                                    "id": 126,
+                                    "name": "Literal",
+                                    "src": "1569:1:0"
+                                  }
+                                ],
+                                "id": 94,
+                                "name": "ElementaryTypeName",
+                                "src": "2516:7:0"
+                              }
+                            ],
+                            "id": 95,
+                            "name": "ArrayTypeName",
+                            "src": "2516:9:0"
+                          }
+                        ],
+                        "id": 96,
+                        "name": "VariableDeclaration",
+                        "src": "2516:23:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256[] memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_rational_5_by_1",
+                                  "typeString": "int_const 5"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "type": "function (uint256) pure returns (uint256[] memory)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "length": null,
+                                  "type": "uint256[] storage pointer"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "type": "uint256",
+                                      "name": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "name": "uint256",
+                                          "type": "uint256"
+                                        },
+                                        "id": 131,
+                                        "name": "ElementaryTypeName",
+                                        "src": "1594:7:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "hexvalue": "35",
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "subdenomination": null,
+                                          "token": "number",
+                                          "type": "int_const 5",
+                                          "value": "5"
+                                        },
+                                        "id": 132,
+                                        "name": "Literal",
+                                        "src": "1602:1:0"
+                                      }
+                                    ],
+                                    "id": 97,
+                                    "name": "ElementaryTypeName",
+                                    "src": "2546:7:0"
+                                  }
+                                ],
+                                "id": 98,
+                                "name": "ArrayTypeName",
+                                "src": "2546:9:0"
+                              }
+                            ],
+                            "id": 99,
+                            "name": "NewExpression",
+                            "src": "2542:13:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "35",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 5",
+                              "value": "5"
+                            },
+                            "id": 100,
+                            "name": "Literal",
+                            "src": "2556:1:0"
+                          }
+                        ],
+                        "id": 101,
+                        "name": "FunctionCall",
+                        "src": "2542:16:0"
+                      }
+                    ],
+                    "id": 102,
+                    "name": "VariableDeclarationStatement",
+                    "src": "2516:42:0"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        106
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "filedataobj",
+                          "scope": 150,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct BlockchainData.FileDataChunk memory[] memory",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "length": null,
+                              "type": "struct BlockchainData.FileDataChunk storage ref[] storage pointer"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "contractScope": null,
+                                  "name": "FileDataChunk",
+                                  "referencedDeclaration": 13,
+                                  "type": "struct BlockchainData.FileDataChunk storage pointer"
+                                },
+                                "id": 104,
+                                "name": "UserDefinedTypeName",
+                                "src": "2569:13:0"
+                              }
+                            ],
+                            "id": 105,
+                            "name": "ArrayTypeName",
+                            "src": "2569:15:0"
+                          }
+                        ],
+                        "id": 106,
+                        "name": "VariableDeclaration",
+                        "src": "2569:35:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct BlockchainData.FileDataChunk storage ref[] storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 18,
+                              "type": "mapping(string memory => struct BlockchainData.FileDataChunk storage ref[] storage ref)",
+                              "value": "filedataMapping"
+                            },
+                            "id": 107,
+                            "name": "Identifier",
+                            "src": "2607:15:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 65,
+                              "type": "string memory",
+                              "value": "hash"
+                            },
+                            "id": 108,
+                            "name": "Identifier",
+                            "src": "2623:4:0"
+                          }
+                        ],
+                        "id": 109,
+                        "name": "IndexAccess",
+                        "src": "2607:21:0"
+                      }
+                    ],
+                    "id": 110,
+                    "name": "VariableDeclarationStatement",
+                    "src": "2569:59:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "assignments": [
+                            148
+                          ],
+                          "constant": false,
+                          "name": "filedatatempobj",
+                          "scope": 150,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct BlockchainData.FileDataChunk memory",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "constant": false,
+                              "name": "FileDataChunk",
+                              "scope": 229,
+                              "stateVariable": false,
+                              "storageLocation": "default",
+                              "type": "struct BlockchainData.FileDataChunk storage pointer",
+                              "value": null,
+                              "visibility": "internal",
+                              "contractScope": null,
+                              "referencedDeclaration": 13
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "name": "uint",
+                                  "type": "uint256"
+                                },
+                                "id": 147,
+                                "name": "ElementaryTypeName",
+                                "src": "1692:4:0"
+                              }
+                            ],
+                            "id": 111,
+                            "name": "UserDefinedTypeName",
+                            "src": "2637:13:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "30",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 0",
+                              "value": "0"
+                            },
+                            "id": 149,
+                            "name": "Literal",
+                            "src": "1701:1:0"
+                          }
+                        ],
+                        "id": 112,
+                        "name": "VariableDeclaration",
+                        "src": "2637:36:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "<",
+                          "type": "struct BlockchainData.FileDataChunk memory"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 106,
+                              "type": "struct BlockchainData.FileDataChunk memory[] memory",
+                              "value": "filedataobj"
+                            },
+                            "id": 113,
+                            "name": "Identifier",
+                            "src": "2676:11:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "length",
+                              "referencedDeclaration": 67,
+                              "type": "uint256",
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "value": "index"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 142,
+                                  "type": "struct BlockchainData.FileDataChunk memory[] memory",
+                                  "value": "filedataobj"
+                                },
+                                "id": 152,
+                                "name": "Identifier",
+                                "src": "1708:11:0"
+                              }
+                            ],
+                            "id": 114,
+                            "name": "Identifier",
+                            "src": "2688:5:0"
+                          }
+                        ],
+                        "id": 115,
+                        "name": "IndexAccess",
+                        "src": "2676:18:0"
+                      },
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "++",
+                              "prefix": true,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 148,
+                                  "type": "uint256",
+                                  "value": "i"
+                                },
+                                "id": 155,
+                                "name": "Identifier",
+                                "src": "1730:1:0"
+                              }
+                            ],
+                            "id": 156,
+                            "name": "UnaryOperation",
+                            "src": "1728:3:0"
+                          }
+                        ],
+                        "id": 157,
+                        "name": "ExpressionStatement",
+                        "src": "1728:3:0"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "bytes32"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "type": "bytes32"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 88,
+                                          "type": "bytes32[] memory",
+                                          "value": "datetime"
+                                        },
+                                        "id": 158,
+                                        "name": "Identifier",
+                                        "src": "1750:8:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 148,
+                                          "type": "uint256",
+                                          "value": "i"
+                                        },
+                                        "id": 159,
+                                        "name": "Identifier",
+                                        "src": "1759:1:0"
+                                      }
+                                    ],
+                                    "id": 160,
+                                    "name": "IndexAccess",
+                                    "src": "1750:11:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "dateTime",
+                                      "referencedDeclaration": 3,
+                                      "type": "bytes32"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "type": "struct BlockchainData.FileDataChunk memory"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 142,
+                                              "type": "struct BlockchainData.FileDataChunk memory[] memory",
+                                              "value": "filedataobj"
+                                            },
+                                            "id": 161,
+                                            "name": "Identifier",
+                                            "src": "1764:11:0"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 148,
+                                              "type": "uint256",
+                                              "value": "i"
+                                            },
+                                            "id": 162,
+                                            "name": "Identifier",
+                                            "src": "1776:1:0"
+                                          }
+                                        ],
+                                        "id": 163,
+                                        "name": "IndexAccess",
+                                        "src": "1764:14:0"
+                                      }
+                                    ],
+                                    "id": 164,
+                                    "name": "MemberAccess",
+                                    "src": "1764:23:0"
+                                  }
+                                ],
+                                "id": 165,
+                                "name": "Assignment",
+                                "src": "1750:37:0"
+                              }
+                            ],
+                            "id": 166,
+                            "name": "ExpressionStatement",
+                            "src": "1750:37:0"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 98,
+                                          "type": "uint256[] memory",
+                                          "value": "sequence"
+                                        },
+                                        "id": 167,
+                                        "name": "Identifier",
+                                        "src": "1798:8:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 148,
+                                          "type": "uint256",
+                                          "value": "i"
+                                        },
+                                        "id": 168,
+                                        "name": "Identifier",
+                                        "src": "1807:1:0"
+                                      }
+                                    ],
+                                    "id": 169,
+                                    "name": "IndexAccess",
+                                    "src": "1798:11:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "sequence",
+                                      "referencedDeclaration": 5,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "type": "struct BlockchainData.FileDataChunk memory"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 142,
+                                              "type": "struct BlockchainData.FileDataChunk memory[] memory",
+                                              "value": "filedataobj"
+                                            },
+                                            "id": 170,
+                                            "name": "Identifier",
+                                            "src": "1812:11:0"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 148,
+                                              "type": "uint256",
+                                              "value": "i"
+                                            },
+                                            "id": 171,
+                                            "name": "Identifier",
+                                            "src": "1824:1:0"
+                                          }
+                                        ],
+                                        "id": 172,
+                                        "name": "IndexAccess",
+                                        "src": "1812:14:0"
+                                      }
+                                    ],
+                                    "id": 173,
+                                    "name": "MemberAccess",
+                                    "src": "1812:23:0"
+                                  }
+                                ],
+                                "id": 174,
+                                "name": "Assignment",
+                                "src": "1798:37:0"
+                              }
+                            ],
+                            "id": 175,
+                            "name": "ExpressionStatement",
+                            "src": "1798:37:0"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "string memory"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "type": "string memory"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 108,
+                                          "type": "string memory[] memory",
+                                          "value": "hashOfFileChunk"
+                                        },
+                                        "id": 176,
+                                        "name": "Identifier",
+                                        "src": "1855:15:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 148,
+                                          "type": "uint256",
+                                          "value": "i"
+                                        },
+                                        "id": 177,
+                                        "name": "Identifier",
+                                        "src": "1871:1:0"
+                                      }
+                                    ],
+                                    "id": 178,
+                                    "name": "IndexAccess",
+                                    "src": "1855:18:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "hashOfFileChunk",
+                                      "referencedDeclaration": 7,
+                                      "type": "string memory"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "type": "struct BlockchainData.FileDataChunk memory"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 142,
+                                              "type": "struct BlockchainData.FileDataChunk memory[] memory",
+                                              "value": "filedataobj"
+                                            },
+                                            "id": 179,
+                                            "name": "Identifier",
+                                            "src": "1876:11:0"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 148,
+                                              "type": "uint256",
+                                              "value": "i"
+                                            },
+                                            "id": 180,
+                                            "name": "Identifier",
+                                            "src": "1888:1:0"
+                                          }
+                                        ],
+                                        "id": 181,
+                                        "name": "IndexAccess",
+                                        "src": "1876:14:0"
+                                      }
+                                    ],
+                                    "id": 182,
+                                    "name": "MemberAccess",
+                                    "src": "1876:30:0"
+                                  }
+                                ],
+                                "id": 183,
+                                "name": "Assignment",
+                                "src": "1855:51:0"
+                              }
+                            ],
+                            "id": 184,
+                            "name": "ExpressionStatement",
+                            "src": "1855:51:0"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "bytes32"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "type": "bytes32"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 118,
+                                          "type": "bytes32[] memory",
+                                          "value": "uuid"
+                                        },
+                                        "id": 185,
+                                        "name": "Identifier",
+                                        "src": "1926:4:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 148,
+                                          "type": "uint256",
+                                          "value": "i"
+                                        },
+                                        "id": 186,
+                                        "name": "Identifier",
+                                        "src": "1931:1:0"
+                                      }
+                                    ],
+                                    "id": 187,
+                                    "name": "IndexAccess",
+                                    "src": "1926:7:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "uuid",
+                                      "referencedDeclaration": 9,
+                                      "type": "bytes32"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "type": "struct BlockchainData.FileDataChunk memory"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 142,
+                                              "type": "struct BlockchainData.FileDataChunk memory[] memory",
+                                              "value": "filedataobj"
+                                            },
+                                            "id": 188,
+                                            "name": "Identifier",
+                                            "src": "1936:11:0"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 148,
+                                              "type": "uint256",
+                                              "value": "i"
+                                            },
+                                            "id": 189,
+                                            "name": "Identifier",
+                                            "src": "1948:1:0"
+                                          }
+                                        ],
+                                        "id": 190,
+                                        "name": "IndexAccess",
+                                        "src": "1936:14:0"
+                                      }
+                                    ],
+                                    "id": 191,
+                                    "name": "MemberAccess",
+                                    "src": "1936:19:0"
+                                  }
+                                ],
+                                "id": 192,
+                                "name": "Assignment",
+                                "src": "1926:29:0"
+                              }
+                            ],
+                            "id": 193,
+                            "name": "ExpressionStatement",
+                            "src": "1926:29:0"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "assignments": [
+                                    195
+                                  ]
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "constant": false,
+                                      "name": "j",
+                                      "scope": 229,
+                                      "stateVariable": false,
+                                      "storageLocation": "default",
+                                      "type": "uint256",
+                                      "value": null,
+                                      "visibility": "internal"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "name": "uint",
+                                          "type": "uint256"
+                                        },
+                                        "id": 194,
+                                        "name": "ElementaryTypeName",
+                                        "src": "1975:4:0"
+                                      }
+                                    ],
+                                    "id": 195,
+                                    "name": "VariableDeclaration",
+                                    "src": "1975:6:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "30",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "number",
+                                      "type": "int_const 0",
+                                      "value": "0"
+                                    },
+                                    "id": 196,
+                                    "name": "Literal",
+                                    "src": "1984:1:0"
+                                  }
+                                ],
+                                "id": 197,
+                                "name": "VariableDeclarationStatement",
+                                "src": "1975:10:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "<",
+                                  "type": "bool"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 195,
+                                      "type": "uint256",
+                                      "value": "j"
+                                    },
+                                    "id": 198,
+                                    "name": "Identifier",
+                                    "src": "1986:1:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "35",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "number",
+                                      "type": "int_const 5",
+                                      "value": "5"
+                                    },
+                                    "id": 199,
+                                    "name": "Literal",
+                                    "src": "1990:1:0"
+                                  }
+                                ],
+                                "id": 200,
+                                "name": "BinaryOperation",
+                                "src": "1986:5:0"
+                              },
+                              {
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "operator": "++",
+                                      "prefix": false,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 195,
+                                          "type": "uint256",
+                                          "value": "j"
+                                        },
+                                        "id": 201,
+                                        "name": "Identifier",
+                                        "src": "1993:1:0"
+                                      }
+                                    ],
+                                    "id": 202,
+                                    "name": "UnaryOperation",
+                                    "src": "1993:3:0"
+                                  }
+                                ],
+                                "id": 203,
+                                "name": "ExpressionStatement",
+                                "src": "1993:3:0"
+                              },
+                              {
+                                "children": [
+                                  {
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "operator": "=",
+                                          "type": "uint256"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "isConstant": false,
+                                              "isLValue": true,
+                                              "isPure": false,
+                                              "lValueRequested": true,
+                                              "type": "uint256"
+                                            },
+                                            "children": [
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": null,
+                                                  "isConstant": false,
+                                                  "isLValue": true,
+                                                  "isPure": false,
+                                                  "lValueRequested": false,
+                                                  "type": "uint256[5] memory"
+                                                },
+                                                "children": [
+                                                  {
+                                                    "attributes": {
+                                                      "argumentTypes": null,
+                                                      "overloadedDeclarations": [
+                                                        null
+                                                      ],
+                                                      "referencedDeclaration": 130,
+                                                      "type": "uint256[5] memory[] memory",
+                                                      "value": "miners"
+                                                    },
+                                                    "id": 204,
+                                                    "name": "Identifier",
+                                                    "src": "2029:6:0"
+                                                  },
+                                                  {
+                                                    "attributes": {
+                                                      "argumentTypes": null,
+                                                      "overloadedDeclarations": [
+                                                        null
+                                                      ],
+                                                      "referencedDeclaration": 148,
+                                                      "type": "uint256",
+                                                      "value": "i"
+                                                    },
+                                                    "id": 205,
+                                                    "name": "Identifier",
+                                                    "src": "2036:1:0"
+                                                  }
+                                                ],
+                                                "id": 207,
+                                                "name": "IndexAccess",
+                                                "src": "2029:9:0"
+                                              },
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": null,
+                                                  "overloadedDeclarations": [
+                                                    null
+                                                  ],
+                                                  "referencedDeclaration": 195,
+                                                  "type": "uint256",
+                                                  "value": "j"
+                                                },
+                                                "id": 206,
+                                                "name": "Identifier",
+                                                "src": "2039:1:0"
+                                              }
+                                            ],
+                                            "id": 208,
+                                            "name": "IndexAccess",
+                                            "src": "2029:12:0"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "isConstant": false,
+                                              "isLValue": true,
+                                              "isPure": false,
+                                              "lValueRequested": false,
+                                              "type": "uint256"
+                                            },
+                                            "children": [
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": null,
+                                                  "isConstant": false,
+                                                  "isLValue": true,
+                                                  "isPure": false,
+                                                  "lValueRequested": false,
+                                                  "member_name": "miners",
+                                                  "referencedDeclaration": 12,
+                                                  "type": "uint256[] memory"
+                                                },
+                                                "children": [
+                                                  {
+                                                    "attributes": {
+                                                      "argumentTypes": null,
+                                                      "isConstant": false,
+                                                      "isLValue": true,
+                                                      "isPure": false,
+                                                      "lValueRequested": false,
+                                                      "type": "struct BlockchainData.FileDataChunk memory"
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "attributes": {
+                                                          "argumentTypes": null,
+                                                          "overloadedDeclarations": [
+                                                            null
+                                                          ],
+                                                          "referencedDeclaration": 142,
+                                                          "type": "struct BlockchainData.FileDataChunk memory[] memory",
+                                                          "value": "filedataobj"
+                                                        },
+                                                        "id": 209,
+                                                        "name": "Identifier",
+                                                        "src": "2044:11:0"
+                                                      },
+                                                      {
+                                                        "attributes": {
+                                                          "argumentTypes": null,
+                                                          "overloadedDeclarations": [
+                                                            null
+                                                          ],
+                                                          "referencedDeclaration": 148,
+                                                          "type": "uint256",
+                                                          "value": "i"
+                                                        },
+                                                        "id": 210,
+                                                        "name": "Identifier",
+                                                        "src": "2056:1:0"
+                                                      }
+                                                    ],
+                                                    "id": 211,
+                                                    "name": "IndexAccess",
+                                                    "src": "2044:14:0"
+                                                  }
+                                                ],
+                                                "id": 212,
+                                                "name": "MemberAccess",
+                                                "src": "2044:21:0"
+                                              },
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": null,
+                                                  "overloadedDeclarations": [
+                                                    null
+                                                  ],
+                                                  "referencedDeclaration": 195,
+                                                  "type": "uint256",
+                                                  "value": "j"
+                                                },
+                                                "id": 213,
+                                                "name": "Identifier",
+                                                "src": "2066:1:0"
+                                              }
+                                            ],
+                                            "id": 214,
+                                            "name": "IndexAccess",
+                                            "src": "2044:24:0"
+                                          }
+                                        ],
+                                        "id": 215,
+                                        "name": "Assignment",
+                                        "src": "2029:39:0"
+                                      }
+                                    ],
+                                    "id": 216,
+                                    "name": "ExpressionStatement",
+                                    "src": "2029:39:0"
+                                  }
+                                ],
+                                "id": 217,
+                                "name": "Block",
+                                "src": "1998:82:0"
+                              }
+                            ],
+                            "id": 218,
+                            "name": "ForStatement",
+                            "src": "1970:110:0"
+                          }
+                        ],
+                        "id": 219,
+                        "name": "Block",
+                        "src": "1733:359:0"
+                      }
+                    ],
+                    "id": 116,
+                    "name": "VariableDeclarationStatement",
+                    "src": "2637:57:0",
+                    "attributes": {
+                      "assignments": [
+                        112
+                      ]
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 84
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "bytes32",
+                          "operator": "="
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 82,
+                              "type": "bytes32",
+                              "value": "datetime"
+                            },
+                            "id": 117,
+                            "name": "Identifier",
+                            "src": "2708:8:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 3,
+                              "type": "bytes32",
+                              "value": "sequence",
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "dateTime"
+                            },
+                            "id": 119,
+                            "name": "MemberAccess",
+                            "src": "2719:24:0",
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 112,
+                                  "type": "struct BlockchainData.FileDataChunk memory",
+                                  "value": "filedatatempobj"
+                                },
+                                "id": 118,
+                                "name": "Identifier",
+                                "src": "2719:15:0"
+                              }
+                            ]
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 108,
+                              "type": "string memory[] memory",
+                              "value": "hashOfFileChunk"
+                            },
+                            "id": 223,
+                            "name": "Identifier",
+                            "src": "2125:15:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 118,
+                              "type": "bytes32[] memory",
+                              "value": "uuid"
+                            },
+                            "id": 224,
+                            "name": "Identifier",
+                            "src": "2141:4:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 130,
+                              "type": "uint256[5] memory[] memory",
+                              "value": "miners"
+                            },
+                            "id": 225,
+                            "name": "Identifier",
+                            "src": "2146:6:0"
+                          }
+                        ],
+                        "id": 120,
+                        "name": "Assignment",
+                        "src": "2708:35:0"
+                      }
+                    ],
+                    "id": 121,
+                    "name": "ExpressionStatement",
+                    "src": "2708:35:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 85,
+                              "type": "uint256",
+                              "value": "sequence"
+                            },
+                            "id": 122,
+                            "name": "Identifier",
+                            "src": "2752:8:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sequence",
+                              "referencedDeclaration": 5,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 112,
+                                  "type": "struct BlockchainData.FileDataChunk memory",
+                                  "value": "filedatatempobj"
+                                },
+                                "id": 123,
+                                "name": "Identifier",
+                                "src": "2763:15:0"
+                              }
+                            ],
+                            "id": 124,
+                            "name": "MemberAccess",
+                            "src": "2763:24:0"
+                          }
+                        ],
+                        "id": 125,
+                        "name": "Assignment",
+                        "src": "2752:35:0"
+                      }
+                    ],
+                    "id": 126,
+                    "name": "ExpressionStatement",
+                    "src": "2752:35:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string memory"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 88,
+                              "type": "string memory",
+                              "value": "hashOfFileChunk"
+                            },
+                            "id": 127,
+                            "name": "Identifier",
+                            "src": "2799:15:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "hashOfFileChunk",
+                              "referencedDeclaration": 7,
+                              "type": "string memory"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 112,
+                                  "type": "struct BlockchainData.FileDataChunk memory",
+                                  "value": "filedatatempobj"
+                                },
+                                "id": 128,
+                                "name": "Identifier",
+                                "src": "2817:15:0"
+                              }
+                            ],
+                            "id": 129,
+                            "name": "MemberAccess",
+                            "src": "2817:31:0"
+                          }
+                        ],
+                        "id": 130,
+                        "name": "Assignment",
+                        "src": "2799:49:0"
+                      }
+                    ],
+                    "id": 131,
+                    "name": "ExpressionStatement",
+                    "src": "2799:49:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string memory"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 91,
+                              "type": "string memory",
+                              "value": "uuid"
+                            },
+                            "id": 132,
+                            "name": "Identifier",
+                            "src": "2862:4:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "uuid",
+                              "referencedDeclaration": 9,
+                              "type": "string memory"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 112,
+                                  "type": "struct BlockchainData.FileDataChunk memory",
+                                  "value": "filedatatempobj"
+                                },
+                                "id": 133,
+                                "name": "Identifier",
+                                "src": "2869:15:0"
+                              }
+                            ],
+                            "id": 134,
+                            "name": "MemberAccess",
+                            "src": "2869:20:0"
+                          }
+                        ],
+                        "id": 135,
+                        "name": "Assignment",
+                        "src": "2862:27:0"
+                      }
+                    ],
+                    "id": 136,
+                    "name": "ExpressionStatement",
+                    "src": "2862:27:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256[] memory"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 96,
+                              "type": "uint256[] memory",
+                              "value": "miners"
+                            },
+                            "id": 137,
+                            "name": "Identifier",
+                            "src": "2898:6:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "miners",
+                              "referencedDeclaration": 12,
+                              "type": "uint256[] memory"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 112,
+                                  "type": "struct BlockchainData.FileDataChunk memory",
+                                  "value": "filedatatempobj"
+                                },
+                                "id": 138,
+                                "name": "Identifier",
+                                "src": "2907:15:0"
+                              }
+                            ],
+                            "id": 139,
+                            "name": "MemberAccess",
+                            "src": "2907:22:0"
+                          }
+                        ],
+                        "id": 140,
+                        "name": "Assignment",
+                        "src": "2898:31:0"
+                      }
+                    ],
+                    "id": 141,
+                    "name": "ExpressionStatement",
+                    "src": "2898:31:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 80
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "tuple(bytes32,uint256,string memory,string memory,uint256[] memory)"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 82,
+                              "type": "bytes32",
+                              "value": "datetime"
+                            },
+                            "id": 142,
+                            "name": "Identifier",
+                            "src": "2952:8:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 85,
+                              "type": "uint256",
+                              "value": "sequence"
+                            },
+                            "id": 143,
+                            "name": "Identifier",
+                            "src": "2962:8:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 88,
+                              "type": "string memory",
+                              "value": "hashOfFileChunk"
+                            },
+                            "id": 144,
+                            "name": "Identifier",
+                            "src": "2971:15:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 91,
+                              "type": "string memory",
+                              "value": "uuid"
+                            },
+                            "id": 145,
+                            "name": "Identifier",
+                            "src": "2987:4:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 96,
+                              "type": "uint256[] memory",
+                              "value": "miners"
+                            },
+                            "id": 146,
+                            "name": "Identifier",
+                            "src": "2992:6:0"
+                          }
+                        ],
+                        "id": 147,
+                        "name": "TupleExpression",
+                        "src": "2951:48:0"
+                      }
+                    ],
+                    "id": 148,
+                    "name": "Return",
+                    "src": "2944:55:0"
+                  }
+                ],
+                "id": 149,
+                "name": "Block",
+                "src": "2385:619:0"
+              }
+            ],
+            "id": 150,
+            "name": "FunctionDefinition",
+            "src": "2255:749:0"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getNumberOfFileChunks",
+              "payable": false,
+              "scope": 164,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "hashOfFile",
+                      "scope": 163,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 151,
+                        "name": "ElementaryTypeName",
+                        "src": "3115:6:0"
+                      }
+                    ],
+                    "id": 152,
+                    "name": "VariableDeclaration",
+                    "src": "3115:17:0"
+                  }
+                ],
+                "id": 153,
+                "name": "ParameterList",
+                "src": "3114:19:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 163,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 154,
+                        "name": "ElementaryTypeName",
+                        "src": "3155:4:0"
+                      }
+                    ],
+                    "id": 155,
+                    "name": "VariableDeclaration",
+                    "src": "3155:4:0"
+                  }
+                ],
+                "id": 156,
+                "name": "ParameterList",
+                "src": "3154:6:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 156
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "length",
+                          "referencedDeclaration": null,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "struct BlockchainData.FileDataChunk storage ref[] storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 18,
+                                  "type": "mapping(string memory => struct BlockchainData.FileDataChunk storage ref[] storage ref)",
+                                  "value": "filedataMapping"
+                                },
+                                "id": 157,
+                                "name": "Identifier",
+                                "src": "3176:15:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 152,
+                                  "type": "string memory",
+                                  "value": "hashOfFile"
+                                },
+                                "id": 158,
+                                "name": "Identifier",
+                                "src": "3192:10:0"
+                              }
+                            ],
+                            "id": 159,
+                            "name": "IndexAccess",
+                            "src": "3176:27:0"
+                          }
+                        ],
+                        "id": 160,
+                        "name": "MemberAccess",
+                        "src": "3176:34:0"
+                      }
+                    ],
+                    "id": 161,
+                    "name": "Return",
+                    "src": "3169:41:0"
+                  }
+                ],
+                "id": 162,
+                "name": "Block",
+                "src": "3161:62:0"
+              }
+            ],
+            "id": 163,
+            "name": "FunctionDefinition",
+            "src": "3084:139:0"
+          }
+        ],
+        "id": 164,
+        "name": "ContractDefinition",
+        "src": "113:3113:0"
+      }
+    ],
+    "id": 165,
+    "name": "SourceUnit",
+    "src": "0:4352:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {
+    "4447": {
+      "events": {},
+      "links": {},
+      "address": "0xf12b5dd4ead5f743c6baa640b0216200e89b60da"
+    }
+  },
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-15T08:57:10.085Z"
+}
