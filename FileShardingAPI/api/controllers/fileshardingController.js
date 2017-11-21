@@ -15,6 +15,40 @@ let contractInstance = contract.at("0x010604899Ac97252f4d4095a0F221f62DE9d6428")
 
 
 
+/**
+ * This method  is used to get latest block details from the database
+ */
+exports.getLatestBlock = function (req, res) {   
+    var count = req.body.count;
+    if(!count)
+    {
+        res.send({
+            "StatusCode": 200,
+            "Data": "count of the blocks required"
+        });
+    }
+    else
+    {
+            var JsonResponse = [];   
+            var CountJson = [
+                {
+                    "StatusCode": 200,
+                }
+            ];
+            var currentBlockNumber = web3.eth.blockNumber;
+            var result = '';
+            for (var i = 0; i < count; i++) {
+                if (i <= currentBlockNumber) {                    
+                    JsonResponse.push(web3.eth.getBlock(web3.eth.blockNumber - i));
+                }
+            }
+            res.send({
+                "StatusCode": 200,
+                "Data": JsonResponse
+            }
+            );
+    }
+};
 
 /**
  * This method  is used to get  file chunks from database for a given hash of file
