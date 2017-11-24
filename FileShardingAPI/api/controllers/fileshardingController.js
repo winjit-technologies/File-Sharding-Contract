@@ -13,7 +13,29 @@ let contract = web3.eth.contract(abi);
 let contractInstance = contract.at("0x010604899Ac97252f4d4095a0F221f62DE9d6428");
 
 
-
+/**
+ * This method is used to get file chunks count for a given hash of file
+ * @param {*} req 
+ * @param {*} res 
+ */
+exports.getFileChunksCount = function(req, res) {      
+    var hashoffile=req.body.filehash;     
+    if(!hashoffile)
+    {           
+        res.send({
+            "StatusCode": 200,
+            "Data": "Hash of the file  required"
+        });
+    }
+else
+{   
+   
+    res.send({
+        "StatusCode": 200,
+        "FileChunksCount": 5
+    }); 
+}         
+};
 
 /**
  * This method  is used to get latest block details from the database
@@ -100,33 +122,7 @@ exports.getFileChunksFromDatabase = function (req, res) {
         }
         );
 
-        /* 
-        This code brings all chunks of a given file but as solidity does not support dynamic string array we have
-        commented this code and are retrieving single chunk of file
-        var result = contractInstance.getFileChunksFromDatabase.call(hashoffile);   
-        for (var i = 0; i < result[0].length; i++) {
-            var datetime = web3.toAscii(result[0][i]).replace(/\u0000/g, '');
-            var sequence = result[1][i].toLocaleString();
-            var hashOfChunk = result[2][i].toLocaleString();
-            var uuid = web3.toAscii(result[3][i]).replace(/\u0000/g, '');
-            var miners=[];
-           
-            for(var j=0;j<5;j++)
-            {                
-              miners.push(result[4][i][j]);
-            }
- 
-            var response = {
-                DateTime: datetime,
-                Sequence: sequence,
-                UUID: uuid,
-                HashOfChunk:hashOfChunk,
-                Miners:miners
-            }
-
-            console.log("response is");
-            console.log(response);
-            JsonResponse.push(response);*/
+     
         }
 
         
