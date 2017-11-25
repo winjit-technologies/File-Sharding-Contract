@@ -1,19 +1,19 @@
 'use strict';
 module.exports = function(app) {
-  var iagoncontroller = 
-  require('../controllers/iagonController.js');
+  var fileshardingcontroller = 
+  require('../controllers/fileshardingController.js');
 
 
  app.route('/GetFileChunksCount')
-    .post(iagoncontroller.getFileChunksCount); 
+    .post(fileshardingcontroller.getFileChunksCount); 
 
   app.route('/WriteFileChunksToDatabase')
-    .post(iagoncontroller.writeFileChunksToDatabase)  ;
+    .post(fileshardingcontroller.writeFileChunksToDatabase)  ;
 
    app.route('/GetLatestBlock')
-    .post(iagoncontroller.getLatestBlock)  ;
+    .post(fileshardingcontroller.getLatestBlock)  ;
 
   app.route('/GetFileChunksFromDatabase')
-    .post(iagoncontroller.getFileChunksFromDatabase)  ;  
+    .post(fileshardingcontroller.getFileChunksFromDatabase)  ;  
    
 };
